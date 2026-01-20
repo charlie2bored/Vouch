@@ -13,25 +13,6 @@ VOUCH is a competency-based employment platform that solves the "Experience Para
 - Mobile-friendly layout
 - Clear value proposition for all three customer segments (students, universities, corporations)
 
-## Usage
-
-Simply open `index.html` in any web browser to view the landing page. The page includes:
-
-- Header with VOUCH branding and tagline
-- About section explaining the platform's purpose
-- Three key value propositions for different customer segments
-- Call-to-action section with contact information
-- Professional footer
-
-## Customization
-
-The landing page is built with basic HTML and CSS, making it easy to customize:
-
-- Edit text content in the HTML file
-- Modify colors and styling in the `<style>` section
-- Add images or additional sections as needed
-- Update contact information as required
-
 ## Contact
 
 Charles Vargas, CEO
