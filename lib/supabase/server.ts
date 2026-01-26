@@ -9,14 +9,20 @@ export function createClient() {
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY!,
     {
       cookies: {
-        getAll() {
-          return cookieStore.getAll()
+        async getAll() {
+          // For Next.js 16 compatibility - cookies() returns a Promise
+          const allCookies = await cookieStore
+          return Array.from(allCookies).map(([name, cookie]) => ({
+            name,
+            value: cookie.value
+          }))
         },
-        setAll(cookiesToSet: any) {
+        async setAll(cookiesToSet: any) {
           try {
-            cookiesToSet.forEach(({ name, value, options }: any) =>
-              cookieStore.set(name, value, options)
-            )
+            const resolvedCookieStore = await cookieStore
+            for (const { name, value, options } of cookiesToSet) {
+              resolvedCookieStore.set(name, value, options)
+            }
           } catch {
             // The `setAll` method was called from a Server Component.
             // This can be ignored if you have middleware refreshing
