@@ -1,0 +1,9 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/grade-submission/route": "/api/grade-submission",
+  "/bounties/[id]/page": "/bounties/[id]",
+  "/bounties/page": "/bounties",
+  "/dashboard/page": "/dashboard",
+  "/page": "/"
+}
